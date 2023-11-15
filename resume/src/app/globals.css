@@ -19,5 +19,6 @@
 body {
  padding: 0;
  margin: 0;
-
+ background-color: rgb(39 39 42);
+ width: 100vh
 }
