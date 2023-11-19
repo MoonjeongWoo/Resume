@@ -1,10 +1,11 @@
 "use client"
 import React from "react";
 
-const Sessions = () => {
+const Sessions = ({ setIsentered }: any) => {
     const makeSession = () => {
         const session = window.sessionStorage;
         session.setItem("enter", "first");
+        setIsentered("first");
     };
 
     return (
