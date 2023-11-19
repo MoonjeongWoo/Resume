@@ -17,11 +17,10 @@
 }
 
 body {
- padding: 0;
- margin: 0;
- background-color: rgb(56, 56, 56);
+  padding: 0;
+  margin: 0;
+  background-color: rgb(56, 56, 56);
 }
-
 
 .navbar {
   position: fixed; /* 고정 위치 */
@@ -31,4 +30,5 @@ body {
   background-color: #333; /* 원하는 배경색 지정 */
   color: #fff; /* 글자 색상 지정 */
   padding: 10px; /* 원하는 여백 설정 */
+  display: flex;
 }

@@ -6,8 +6,12 @@ export default function Navbar() {
       <div>
         <Link href="/">Home</Link>
       </div>
-      <Link href="/aboutme">ABOUT</Link>
-      <Link href="/session">Session</Link>
+      <div>
+        <Link href="/aboutme">ABOUT</Link>
+      </div>
+      <div>
+        <Link href="/session">Session</Link>
+      </div>
     </div>
   );
 }
