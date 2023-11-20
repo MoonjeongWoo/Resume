@@ -28,7 +28,33 @@ body {
   left: 0;
   right: 0;
   background-color: #333; /* 원하는 배경색 지정 */
-  color: #fff; /* 글자 색상 지정 */
-  padding: 10px; /* 원하는 여백 설정 */
+  color: #fff; /* 글자 색상 지정 */ /* 원하는 여백 설정 */
   display: flex;
+}
+
+@keyframes rotateIn {
+  from {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+@keyframes rotateOut {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+.rotate-in {
+  animation: rotateIn 1s ease-in-out;
+}
+.rotate-out {
+  animation: rotateOut 0.5s ease;
 }
