@@ -24,7 +24,6 @@ export default function RootLayout({
 
     if (first === "first") {
       setIsentered("first");
-      setAnimated(true);
     }
   }, []);
 
@@ -35,6 +34,7 @@ export default function RootLayout({
           <Sessions
             setIsentered={setIsentered}
             setAnimated={setAnimated}
+            animated={animated}
           ></Sessions>
         ) : (
           <>

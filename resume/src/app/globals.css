@@ -42,19 +42,24 @@ body {
     opacity: 1;
   }
 }
-@keyframes rotateOut {
+@keyframes zoomOutRotate {
   from {
     transform: rotate(0deg);
-    opacity: 1;
+    opacity: 0;
   }
   to {
     transform: rotate(360deg);
-    opacity: 0;
+    opacity: 1;
   }
 }
+
+.zoom-out-rotate {
+  animation: zoomOutRotate 2s ease-out;
+}
+.zoom-out-rotate:hover {
+  animation: zoomOutRotate 0.1s infinite;
+}
+
 .rotate-in {
   animation: rotateIn 1s ease-in-out;
-}
-.rotate-out {
-  animation: rotateOut 0.5s ease;
 }
