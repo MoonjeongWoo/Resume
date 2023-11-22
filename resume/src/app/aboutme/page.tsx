@@ -1,13 +1,9 @@
-
-
 const Aboutme = () => {
-    return (
-        <>
-            <div>
-                 여기는 나를 소개하는 컴포넌트
-            </div>
-        </>
-    )
-}
+  return (
+    <>
+      <div>이제 여기서 효과를 넣줘야 함</div>
+    </>
+  );
+};
 
-export default Aboutme
+export default Aboutme;

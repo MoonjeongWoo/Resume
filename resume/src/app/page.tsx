@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <main>
       <div>
-        <div>안녕하세요! 문정우 소개 홈페이지 입니다.</div>
+        <div>여기도 효과를 넣어줘야 함</div>
       </div>
     </main>
   );
