@@ -1,8 +1,14 @@
+import React from "react";
+import Imagecomp from "./components/Image/Imagecomp";
 export default function Home() {
   return (
     <main>
       <div>
-        <div>여기도 효과를 넣어줘야 함</div>
+        <div className="flex items-center justify-center">
+          <div className="flex flex-col">
+            <Imagecomp />
+          </div>
+        </div>
       </div>
     </main>
   );
