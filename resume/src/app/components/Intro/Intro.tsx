@@ -10,12 +10,15 @@ const Intro = () => {
     "지금 부터 저에 대해서 소개를 해 드릴려 합니다.",
     "버튼을 눌러주세용",
     "싫으면 나가시던가요",
-    "exit",
+    "Next",
   ];
 
   const handleClick = () => {
     if (isClicked === messages.length - 1) {
-      window.close;
+      const outok = window.confirm("진짜로 나가실거에용...???");
+      if (outok) {
+        window.close();
+      }
     }
   };
   return (
@@ -26,7 +29,6 @@ const Intro = () => {
             setIsClicked((prev) =>
               prev < messages.length - 1 ? prev + 1 : prev
             );
-            handleClick();
           }}
           className="text-center cursor-pointer"
         >
@@ -35,7 +37,24 @@ const Intro = () => {
       </div>
       <div className="mt-[50px]">
         <div className="flex items-center justify-center  h-16">
-          <Button></Button>
+          {isClicked === messages.length - 1 ? (
+            <>
+              <div className="flex gap-10">
+                <button
+                  onClick={(outok) => {
+                    if (outok) {
+                      handleClick();
+                    }
+                  }}
+                >
+                  EXIT
+                </button>
+                <Button messages={messages} />
+              </div>
+            </>
+          ) : (
+            <Button messages={messages} />
+          )}
         </div>
       </div>
     </>
