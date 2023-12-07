@@ -1,3 +1,4 @@
+"use client";
 import styled, { keyframes } from "styled-components";
 import School from "../components/spec/school";
 import Project from "../components/spec/project";
