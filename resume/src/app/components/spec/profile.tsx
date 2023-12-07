@@ -15,8 +15,15 @@ const Profile = () => {
         {isupted ? (
           <div className="">안녕하세요</div>
         ) : (
-          <div className="">안녕하시와요!</div>
+          <div className="">제 신상 정보에오</div>
         )}
+      </div>
+      <div>
+        {isupted ? (
+          <>
+            <div>여기는 찐으로 내 신상 정보를 보여주는 곳</div>
+          </>
+        ) : null}
       </div>
     </>
   );
