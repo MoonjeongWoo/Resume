@@ -11,19 +11,16 @@ const Intro = () => {
     "버튼을 눌러주세용",
     "싫으면 나가시던가요",
     "Next",
-    "Go",
   ];
 
-  const nextMessagesIndex = messages.indexOf("Next");
   const handleClick = () => {
-    if (isClicked === nextMessagesIndex) {
+    if (isClicked === messages.length - 1) {
       const outok = window.confirm("진짜로 나가실거에용...???");
       if (outok) {
         window.close();
       }
     }
   };
-
   return (
     <>
       <div className="flex items-center justify-center rounded-md bg-slate-50 h-16">
@@ -40,7 +37,7 @@ const Intro = () => {
       </div>
       <div className="mt-[50px]">
         <div className="flex items-center justify-center  h-16">
-          {isClicked === nextMessagesIndex ? (
+          {isClicked === messages.length - 1 ? (
             <>
               <div className="flex gap-10">
                 <button
