@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import useStateStore from "@/app/zustand/statements";
 const Button = ({ messages }: any) => {
+  const lastindex = messages.indexOf("Next");
   const { isClicked, setIsClicked } = useStateStore();
   return (
     <div>
