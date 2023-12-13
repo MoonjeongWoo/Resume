@@ -6,7 +6,7 @@ import useStateStore from "./zustand/statements";
 import Aboutme from "./aboutme/page";
 export default function Home() {
   const { isClicked } = useStateStore();
-  console.log("isClicked", isClicked);
+
   return (
     <main>
       <div className="flex flex-col items-center justify-center">
