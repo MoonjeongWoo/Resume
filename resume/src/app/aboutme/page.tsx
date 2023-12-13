@@ -3,6 +3,7 @@ import styled, { keyframes } from "styled-components";
 import School from "../components/spec/school";
 import Project from "../components/spec/project";
 import Profile from "../components/spec/profile";
+import useStateStore from "../zustand/statements";
 const Aboutme = () => {
   return (
     <>
@@ -22,18 +23,32 @@ const Aboutme = () => {
 };
 
 export default Aboutme;
-
 const riseUpAnimation = keyframes`
   from {
-    transform: translateY(20px); // start from 20px below the final position
-    opacity: 0; // start from fully transparent
+    transform: translateY(20px); 
+    opacity: 0; 
   }
   to {
-    transform: translateY(0); // end at the final position
-    opacity: 1; // end at fully opaque
+    transform: translateY(0);
+    opacity: 1; 
   }
 `;
 
 const Makeup = styled.div`
-  animation: ${riseUpAnimation} 0.2s ease-out; // Apply the animation with a duration of 1s and an ease-out effect
+  > div {
+    opacity: 0;
+    animation: ${riseUpAnimation} 0.3s ease-out forwards;
+  }
+
+  > div:nth-child(1) {
+    animation-delay: 0.3s;
+  }
+
+  > div:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+
+  > div:nth-child(3) {
+    animation-delay: 0.8s;
+  }
 `;

@@ -1,8 +1,9 @@
 "use client";
+import useStateStore from "@/app/zustand/statements";
 import React, { useState } from "react";
 
 const Profile = () => {
-  const [isupted, setIsUpted] = useState(false);
+  const { isupted, setIsUpted } = useStateStore();
   return (
     <>
       <div
@@ -13,7 +14,7 @@ const Profile = () => {
         className="flex bg-white rounded-xl h-20 text-center items-center justify-center cursor-pointer"
       >
         {isupted ? (
-          <div className="">안녕하세요</div>
+          <div className=""></div>
         ) : (
           <div className="">안녕하시와요!</div>
         )}
