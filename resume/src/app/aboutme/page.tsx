@@ -1,21 +1,48 @@
 "use client";
 import styled, { keyframes } from "styled-components";
+import React, { useState } from "react";
 import School from "../components/spec/school";
 import Project from "../components/spec/project";
 import Profile from "../components/spec/profile";
 import useStateStore from "../zustand/statements";
+
+type ComponentName = "Profile" | "Project" | "School";
+
 const Aboutme = () => {
+  const [selectedComponent, setSelectedComponent] =
+    useState<ComponentName | null>(null);
+
+  const selectComponent = (component: ComponentName) => {
+    setSelectedComponent((prevComponent) =>
+      prevComponent === component ? null : component
+    );
+  };
   return (
     <>
       <Makeup>
-        <div className="m-5">
-          <Profile></Profile>
+        <div
+          className={`m-5 ${selectedComponent === "Profile" ? "selected" : ""}`}
+          onClick={() => selectComponent("Profile")}
+        >
+          {selectedComponent === null || selectedComponent === "Profile" ? (
+            <Profile />
+          ) : null}
         </div>
-        <div className="m-5">
-          <Project></Project>
+        <div
+          className={`m-5 ${selectedComponent === "Project" ? "selected" : ""}`}
+          onClick={() => selectComponent("Project")}
+        >
+          {selectedComponent === null || selectedComponent === "Project" ? (
+            <Project />
+          ) : null}
         </div>
-        <div className="m-5">
-          <School></School>
+        <div
+          className={`m-5 ${selectedComponent === "School" ? "selected" : ""}`}
+          onClick={() => selectComponent("School")}
+        >
+          {selectedComponent === null || selectedComponent === "School" ? (
+            <School />
+          ) : null}
         </div>
       </Makeup>
     </>
